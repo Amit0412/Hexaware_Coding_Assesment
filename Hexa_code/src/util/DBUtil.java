@@ -13,6 +13,7 @@ public class DBUtil {
 	    
 public static Connection getDBConn() throws ClassNotFoundException{
 	        try {
+			Class.forName("com.mysql.cj.jdbc.Driver"); 
 	        	connection = DriverManager.getConnection(url, user, password);
 	        	return connection;
 	        } catch (SQLException e) {
